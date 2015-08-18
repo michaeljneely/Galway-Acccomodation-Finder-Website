@@ -1,0 +1,148 @@
+<head>
+	<title>Search Postings</title>
+</head>
+<!--#include virtual="top.html" -->
+<form class="form-horizontal" id="mainsearch" name="mainsearch" method="post" action="results.php">
+	<fieldset>
+		<legend>What are you looking for?</legend>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="walkdistance">Walking Distance From College</label>
+			<div class="col-md-4">
+				<select id="walkdistance" name="walkdistance" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="5">5 minutes or less</option>
+					<option value="10">10 minutes or less</option>
+					<option value="15">15 minutes or less</option>
+					<option value="20">20 minutes or less</option>
+					<option value="21">20+ minutes</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="price">Max Price</label>
+			<div class="col-md-4">
+				<select id="price" name="price" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="500">500 Euro/month or less</option>
+					<option value="750">750 Euro/month or less</option>
+					<option value="1000">1000 Euro/month or less</option>
+					<option value="1500">1500 Euro/month or less</option>
+					<option value="1501">1500+ Euro/month</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="lengthlease">Length of Lease</label>
+			<div class="col-md-4">
+				<select id="lengthlease" name="lengthlease" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="3">3 months or less</option>
+					<option value="6">6 months or less</option>
+					<option value="9">9 months or less</option>
+					<option value="12">1 year or less</option>
+					<option value="13">1 year+ </option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group form-inline">
+			<label class="col-md-4 control-label" for="bedroom_min">Bedrooms</label>
+			<div class="col-md-1">
+				<select id="bedroom_min" name="bedroom_min" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+			</div>
+			<label class="col-md-1 text-center control-label" for="bedroom_max">To</label>
+			<div class="col-md-1">
+				<select id="bedroom_max" name="bedroom_max" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="99">5+</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group form-inline">
+			<label class="col-md-4 control-label" for="bathroom_min">Bathrooms</label>
+			<div class="col-md-1">
+				<select id="bathroom_min" name="bathroom_min" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+			</div>
+			<label class="col-md-1 text-center control-label" for="bathroom_max">To</label>
+			<div class="col-md-1">
+				<select id="bathroom_max" name="bathroom_max" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="99">4+</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="furnished">Furnished</label>
+			<div class="col-md-4"> 
+				<label class="radio-inline" for="furnished-0">
+					<input type="radio" name="furnished" id="furnished-0" value="yes">
+						yes
+				</label> 
+				<label class="radio-inline" for="furnished-1">
+					<input type="radio" name="furnished" id="furnished-1" value="no">
+						no
+				</label>
+				<label class="radio-inline" for="furnished-2">
+					<input type="radio" name="furnished" id="furnished-2" value="0" checked>
+						Don't mind
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="type">Type</label>
+			<div class="col-md-4">
+				<select id="type" name="type" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="apartment">apartment</option>
+					<option value="house">house</option>
+					<option value="studio">studio</option>
+					<option value="digs">digs</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="keywords">Key Words</label>
+			<div class="col-md-4">                     
+				<textarea class="form-control" id="keywords" name="keywords" placeholder="enter keywords such as 'dishwasher'..."></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="orderby">Order By</label>
+			<div class="col-md-4">
+				<select id="orderby" name="orderby" class="form-control">
+					<option selected value="0">Don't mind</option>
+					<option value="price">Price</option>
+					<option value="walkingdistance">Walking Distance</option>
+					<option value="lease_length">Length of Lease</option>
+					<option value="bedrooms">Bedrooms</option>
+					<option value="bathrooms">Bathrooms</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="search"></label>
+			<div class="col-md-4">
+				<input id="search" name="search" class="btn btn-primary" value="Search Postings" type="submit"/>
+			</div>
+		</div>
+	</fieldset>
+</form>
+
+<!--#include virtual="bottom.html" -->
