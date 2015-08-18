@@ -1,0 +1,49 @@
+<head>
+<title>Gaffs Home</title>
+<style>
+footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+</style>
+</head>
+<!--#include virtual="top.html" -->
+<div class="col-lg-12">
+    <hr>
+    <h2 class="intro-text text-center">Quick Search</h2>
+    <hr>
+</div>
+<div class="col-lg-12">
+	<div class="form-group">
+		<form class="form-inline" role="form" align="center" action="quick_results.php" method="post">
+			<select class="form-control" id="bedrooms" name="bedrooms">
+				<option selected value="0">Bedrooms</option>
+				<option value="1">1 bedroom</option>
+				<option value="2">2 bedrooms</option>
+				<option value="3">3 bedrooms</option>
+				<option value="4">4 bedrooms</option>
+				<option value="5">5+ bedrooms</option>
+			</select>
+			<select class="form-control" id="max_price" name="max_price">
+				<option selected value="0">Max Price </option>
+				<option value="500">500 Euro/month or less</option>
+				<option value="750">750 Euro/month or less</option>
+				<option value="1000">1000 Euro/month or less</option>
+				<option value="1500">1500 Euro/month or less</option>
+				<option value="1501">1500+ Euro/month</option>
+			</select>
+			<select class="form-control" id="walkingdistance" name="walkingdistance">
+				<option selected value="0">Walking Distance from College</option>
+				<option value="5">5 minutes or less</option>
+				<option value="10">10 minutes or less</option>
+				<option value="15">15 minutes or less</option>
+				<option value="20">20 minutes or less</option>
+				<option value="21">20+ minutes</option>
+			</select>
+			<input type="submit" value="Search" class="btn btn-default" />
+		</form>
+	</div>
+    <div class="clearfix"></div>
+<!--#include virtual="bottom.html" -->
