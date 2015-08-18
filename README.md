@@ -9,4 +9,4 @@ The website was a personal excercise in the following:
 ->Generating and maintaining sessions with PHP
 ->Generating HTML Web pages that can be dynamically altered with PHP
 ->Building detailed SQL statements through search forms to display filtered results
-
+->Using Bootstrap and jQuery
